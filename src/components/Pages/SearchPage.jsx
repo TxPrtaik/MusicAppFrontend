@@ -278,6 +278,7 @@ PlaylistModal.displayName = 'PlaylistModal';
 
 /* ── Main SearchPage ─────────────────────────────────────── */
 const SearchPage = () => {
+  console.log(API_BASE);
   const [searchQuery, setSearchQuery]           = useState('');
   const [searchResults, setSearchResults]       = useState([]);
   const [loading, setLoading]                   = useState(false);
