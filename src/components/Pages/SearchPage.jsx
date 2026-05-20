@@ -278,7 +278,7 @@ PlaylistModal.displayName = 'PlaylistModal';
 
 /* ── Main SearchPage ─────────────────────────────────────── */
 const SearchPage = () => {
-  console.log(API_BASE);
+  
   const [searchQuery, setSearchQuery]           = useState('');
   const [searchResults, setSearchResults]       = useState([]);
   const [loading, setLoading]                   = useState(false);
@@ -434,6 +434,7 @@ const SearchPage = () => {
     else{
       if(audioRef.current){
         audioRef.current.src=`${API_BASE}/music/${song.music}`;
+     console.log(`${API_BASE}/music/${song.music}`)
         audioRef.current.play();
         setCurrentSong(song); setCurrentlyPlaying(song._id); setIsPlaying(true); setShowPlayer(true); setIsPlayerMinimized(false);
       }
